@@ -1,0 +1,19 @@
+// Global Colors
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-gray-light-1: #f7f7f7;
+$color-black: #000;
+$primary-linear-gradient: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
+
+// Grid 
+$grid-max-width: 114rem;
+$grid-gutter-vertical: 2rem; // Margen
+$grid-gutter-horizontal: 2rem; // Margen
+
+:root {
+    --site-padding: 3rem;
+    --site-font-size: 62.5%; /* Rem Size | 10/16=0.625*100=62.5 | Zoom Corregido*/
+    --color-grey-dark: #777;
+    --color-white: #fff;
+}

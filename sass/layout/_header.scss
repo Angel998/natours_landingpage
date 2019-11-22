@@ -1,0 +1,39 @@
+.header {
+    height: 95vh;
+    background-image: $primary-linear-gradient, url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* Coordenadas para formar una figura, todas sus 
+    esquinas estan en orden en direccion del reloj 
+    x y, x y, x y, x y*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &-logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &-logo-box .logo {
+        height: 3.5rem;
+    }
+
+    &-text-box {
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* Centrar: Traslada el elemento segun su tamanio*/
+        transform: translate(-50%, -50%);
+    }
+
+    &-text-box .btn {
+        background-color: #ffffff;
+        margin-top: 2rem;
+        /* Animation name, duration, type, delay */
+        animation: move-in-bottom 0.35s ease-out 1s;
+        /* Aplicar las propiedades de la animacion al objeto desde el inicio */
+        animation-fill-mode: backwards; 
+    }
+}
