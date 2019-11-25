@@ -8,6 +8,10 @@
 
 a {
     text-decoration: none;
+
+    &:visited {
+        text-decoration: none;
+    }
 }
 
 html {

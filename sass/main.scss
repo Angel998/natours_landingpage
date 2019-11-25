@@ -1,11 +1,15 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/config";
 @import "base/typography";
 @import "base/utilities";
 
 @import "abstracts/functions";
-@import "abstracts/mixins";
+@import "components/composition";
+@import "components/feature_box";
+@import "components/card";
+@import "components/story";
 
 @import "layout/header";
 @import "layout/grid";
