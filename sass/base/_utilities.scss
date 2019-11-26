@@ -6,6 +6,8 @@
     text-transform: uppercase;
     transition: all 0.15s;
     position: relative;
+    border: none;
+    cursor: pointer;
 
     &:hover {
         transform: translateY(-0.3rem);
@@ -55,6 +57,10 @@
         &.btn-white::after {
             background-color: var(--color-white);
         }
+    }
+
+    &-text {
+        color: $color-primary;
     }
 }
 
