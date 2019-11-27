@@ -7,6 +7,10 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transition: all .3s;
 
+    .heading-tertiary {
+        margin-bottom: 2rem;
+    }
+
     &-icon {
         font-size: 6rem;
         @include linear-gradient-text;
@@ -15,5 +19,13 @@
     &:hover {
         transform: translateY(-1.5rem) scale(1.2);
         box-shadow: 0rem 5rem 3rem rgba($color-black, 0.15);
+    }
+
+    @include respond(phone-tab) {
+        padding: 2rem;
+
+        .heading-tertiary {
+            margin-bottom: .5rem;
+        }
     }
 }

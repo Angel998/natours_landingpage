@@ -1,4 +1,7 @@
 .header {
+    $header-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    $header-clip-path-mobile: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
     height: 95vh;
     background-image: $linear-gradient-bg-image;
     background-size: cover;
@@ -7,7 +10,9 @@
     /* Coordenadas para formar una figura, todas sus 
     esquinas estan en orden en direccion del reloj 
     x y, x y, x y, x y*/
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: $header-clip-path;
+    -webkit-clip-path: $header-clip-path;
+    -moz-clip-path: $header-clip-path;
 
     &-logo-box {
         position: absolute;
@@ -35,5 +40,11 @@
         animation: move-in-bottom 0.35s ease-out 1s;
         /* Aplicar las propiedades de la animacion al objeto desde el inicio */
         animation-fill-mode: backwards; 
+    }
+
+    @include respond(phone) {
+        clip-path: $header-clip-path-mobile;
+        -webkit-clip-path: $header-clip-path-mobile;
+        -moz-clip-path: $header-clip-path-mobile;
     }
 }

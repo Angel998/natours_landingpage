@@ -16,6 +16,12 @@
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
         text-align: center;
+        cursor: pointer;
+
+        @include respond(phone-tab) {
+            top: 4rem;
+            right: 4rem;
+        }
     }
 
     &-background {
@@ -29,6 +35,11 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
         transition: transform $animation-duration cubic-bezier(0.86, 0, 0.07, 1);
+    
+        @include respond(phone-tab) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
     }
 
     &-nav {

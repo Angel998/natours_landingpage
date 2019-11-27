@@ -29,8 +29,12 @@ $linear-gradient-bg-image: linear-gradient(
 
 // Grid 
 $grid-max-width: 114rem;
+$grid-max-width-small: 60rem; // Phone, Table
+
 $grid-gutter-vertical: 2rem; // Margen
 $grid-gutter-horizontal: 4rem; // Margen
+$grid-gutter-vertical-small: 1rem; // Margen
+$grid-gutter-horizontal-small: 2rem; // Margen
 
 // Fonts
 $default-font-size: 1.6rem;

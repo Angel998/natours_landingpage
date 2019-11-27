@@ -3,18 +3,23 @@
     margin: 0 auto;
     display: block;
 
+    @include respond(phone-tab) {
+        max-width: $grid-max-width-small;
+        padding: 0 2rem;
+    }
+
     // Remover el margin-bottom en el ultimo row
     &:not(:last-child) {
         margin-bottom: $grid-gutter-vertical;
+        @include respond(phone-tab) {
+            margin-bottom: $grid-gutter-vertical-small;
+        }
     }
 
     @include clearfix;
 
     .col {
         float: left;
-        &:not(:last-child) {
-            margin-right: $grid-gutter-horizontal;
-        }
 
         &.m10 {
             width: calc(
@@ -46,6 +51,19 @@
             width: calc(
                 (100% - (5 * #{$grid-gutter-horizontal})) / 6
             );
+        }
+
+        &:not(:last-child) {
+            margin-right: $grid-gutter-horizontal;
+
+            @include respond(phone-tab) {
+                margin-right: 0;
+                margin-bottom: $grid-gutter-vertical-small;
+            }
+        }
+
+        @include respond(phone-tab) {
+            width: 100% !important;
         }
     }
 }

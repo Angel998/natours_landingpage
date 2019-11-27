@@ -19,7 +19,24 @@ a {
 }
 
 html {
-    font-size: var(--site-font-size);
+    // 1rem = 10px; 10px/16px = 0.625 * 100 = 62.5
+    font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+
+    @include respond(tab) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -30,4 +47,12 @@ body {
     color: var(--color-grey-dark);
     padding: var(--site-padding);
     box-sizing: border-box;
+
+    @include respond(phone) {
+        padding: 0;
+    }
+
+    @include respond(tab) {
+        padding: 0;
+    }
 }
