@@ -39,6 +39,8 @@ a {
     text-decoration: none; }
 
 html {
+  scroll-behavior: smooth;
+  transition: scroll-behavior 5s 2s;
   font-size: 62.5%; }
   @media (min-width: 6.25em) and (max-width: 37.5em) {
     html {
@@ -444,6 +446,35 @@ body {
   .card-price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (min-width: 6.25em) and (max-width: 64em) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15); }
+      .card-side {
+        height: auto;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: none; }
+        .card-side-back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          -moz-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card-side-front {
+        transform: rotateY(0); }
+      .card-cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card-price {
+        margin-bottom: 0rem; }
+      .card-price-value {
+        font-size: 6rem; } }
 
 .story {
   width: 75%;
@@ -455,6 +486,18 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (min-width: 6.25em) and (max-width: 64em) {
+    .story {
+      width: 100%;
+      padding: 3rem;
+      padding-left: 7rem; } }
+  @media (min-width: 6.25em) and (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); }
+      .story .story-shape {
+        transform: translateX(-2rem) skewX(0); }
+      .story .story-text {
+        transform: skewX(0); } }
   .story-shape {
     width: 15rem;
     height: 15rem;
@@ -580,6 +623,13 @@ body {
 
 .form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
   opacity: 1; }
+
+@media (min-width: 6.25em) and (max-width: 37.5em) {
+  .form .form-radio-group {
+    width: 100%;
+    margin-bottom: 2rem; }
+  .form .form-input {
+    width: 100%; } }
 
 .navigation-checkbox {
   display: none; }
@@ -709,6 +759,23 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .4s; }
+  @media (min-width: 37.5625em) and (max-width: 64em) {
+    .popup .popup-content {
+      width: 80%; } }
+  @media (min-width: 6.25em) and (max-width: 37.5em) {
+    .popup .popup-content {
+      display: block; }
+    .popup .popup-left {
+      padding-top: 6rem;
+      display: flex;
+      width: 100%; }
+    .popup .popup-right {
+      display: block;
+      width: 100%; }
+    .popup .popup-close:link,
+    .popup .popup-close:visited {
+      top: 2rem;
+      right: 2rem; } }
   .popup-content {
     background-color: #fff;
     border-radius: 3px;
@@ -891,7 +958,9 @@ body {
   padding: 20rem 0 15rem 0; }
   @media (min-width: 6.25em) and (max-width: 64em) {
     .section-tours {
-      padding: 12rem 0 7rem 0; } }
+      padding: 12rem 0 7rem 0; }
+      .section-tours .row .col:not(:last-child) {
+        margin-bottom: 7rem; } }
 
 .section-stories {
   padding: 10rem 0;
@@ -911,13 +980,24 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
-  background-size: cover;
+  background-size: 100%;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3); }
   .book-form {
     width: 50%;
     padding: 6rem; }
+  @media (min-width: 37.5625em) and (max-width: 64em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 75%, transparent 75%), url("../img/nat-10.jpg");
+      background-size: cover; }
+      .book .book-form {
+        width: 85%; } }
+  @media (min-width: 6.25em) and (max-width: 37.5em) {
+    .book {
+      background-image: none;
+      background-color: #fff; }
+      .book .book-form {
+        width: 100%; } }
 
 .footer {
   padding: 10rem 0;
@@ -961,7 +1041,8 @@ body {
     @media (min-width: 6.25em) and (max-width: 64em) {
       .footer-copyright {
         width: 100%;
-        float: none; } }
+        float: none;
+        text-align: center; } }
   @media (min-width: 6.25em) and (max-width: 64em) {
     .footer {
       padding: 8rem 0; } }

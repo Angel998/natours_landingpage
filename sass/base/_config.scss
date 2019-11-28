@@ -19,6 +19,8 @@ a {
 }
 
 html {
+    scroll-behavior: smooth;
+    transition: scroll-behavior 5s 2s;
     // 1rem = 10px; 10px/16px = 0.625 * 100 = 62.5
     font-size: 62.5%;
 

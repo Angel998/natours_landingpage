@@ -10,6 +10,35 @@
     visibility: hidden;
     transition: all .4s;
 
+    @include respond(tab) {
+        .popup &-content {
+            width: 80%;
+        }
+    }
+
+    @include respond(phone) {
+        .popup &-content {
+            display: block;
+        }
+
+        .popup &-left {
+            padding-top: 6rem;
+            display: flex; 
+            width: 100%;
+        }
+
+        .popup &-right {
+            display: block;
+            width: 100%;
+        }
+
+        .popup  &-close:link,
+        .popup  &-close:visited {
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+
     &-content {
         background-color: $color-white;
         border-radius: 3px;
